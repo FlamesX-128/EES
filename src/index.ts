@@ -247,7 +247,7 @@ export async function render(filePath: string, isText?: boolean): Promise<string
    */
   const executeJS = async (code: string): Promise<string> => {
     /** @type {Function} value*/
-    const value: Function = new Function("dataStore", `console.log(dataStore); const cache = []; async function main() { ${code} }; (async () => await main())().catch((err) => console.log(\`\${err.name}: \${err.message}\`)); return cache;`);
+    const value: Function = new Function("dataStore", `const cache = []; async function main() { ${code} }; (async () => await main())().catch((err) => console.log(\`\${err.name}: \${err.message}\`)); return cache;`);
 
     return await value(dataStore).join("");
   };
