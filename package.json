@@ -1,0 +1,21 @@
+{
+  "name": "@flamesx_128/ees",
+  "version": "0.0.1",
+  "description": "You can use javascript templates in the html.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "nodemon -e ts --exec \"npm run build && npm start\""
+  },
+  "keywords": [],
+  "author": {
+    "name": "FlamesX-128",
+    "url": "https://github.com/FlamesX-128"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^16.4.3",
+    "nodemon": "^2.0.12"
+  }
+}
